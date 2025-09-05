@@ -52,8 +52,6 @@ const Login = () => {
                 </Field.Label>
                 <Input placeholder="Enter your username" value={username} onChange={(e) => setUsername(e.target.value)} />
                 <Field.HelperText>We'll never share your email.</Field.HelperText>
-                {username}
-
             </Field.Root>
             <br></br>
 
@@ -71,7 +69,6 @@ const Login = () => {
                     />
                     <Text>Password is {visible ? "visible" : "hidden"}</Text>
                 </Field.Root>
-                {password}
             </Stack >
             <br></br>
             <Stack direction="row" gap="4" align="center">

@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-import { Text, Field, Input, Stack, Button } from '@chakra-ui/react'
+import { Text, Field, Input, Stack, Button, } from '@chakra-ui/react'
 
 
 import { PasswordInput } from "../components/ui/password-input"
@@ -33,7 +33,7 @@ const AdminSignup = () => {
 
 
         } catch (error) {
-            console.log("error sending data" + error);
+            console.log("error sending data!" + error);
 
         }
 
@@ -53,7 +53,7 @@ const AdminSignup = () => {
                 </Field.Label>
                 <Input placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)} />
                 {/* <Field.HelperText>We'll never share your email.</Field.HelperText> */}
-                {name}
+
 
             </Field.Root>
             <br></br>
@@ -64,7 +64,6 @@ const AdminSignup = () => {
                 </Field.Label>
                 <Input placeholder="Enter your username" value={userName} onChange={(e) => setuserName(e.target.value)} />
                 <Field.HelperText>We'll never share your email.</Field.HelperText>
-                {userName}
 
             </Field.Root>
             <br></br>
@@ -84,12 +83,10 @@ const AdminSignup = () => {
                     />
                     <Text>Password is {visible ? "visible" : "hidden"}</Text>
                 </Field.Root>
-                {password}
             </Stack >
             <br></br>
             <Stack direction="row" gap="4" align="center">
                 <Button loading={loading} onClick={() => submitHandler(!loading)}>Login</Button>
-
             </Stack >
 
 
